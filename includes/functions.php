@@ -44,6 +44,13 @@ function getAllCategories() {
     return $ret;
 }
 
+ function getCategorieById($id) {
+     $dbh = connectDB();
+     $req = "SELECT id, nom FROM categorie WHERE id = $id";
+     $ret = $dbh->query($req)->fetch();
+     return $ret;
+ }
+
 function getAlbumById($id) {
     $dbh = connectDB();
     $req = "SELECT id, nom, created_date, title, id_category FROM albums WHERE id = $id";

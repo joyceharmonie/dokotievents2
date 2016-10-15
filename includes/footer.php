@@ -57,8 +57,7 @@
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57ff90fe58e42018"></script>
 
-
-<footer>
+<footer style="margin-top: 35%;">
     <!-- Copyright and social media section -->
     <section class="copyright-section" style="margin-top: 20%;">
         <div class="container">

@@ -17,34 +17,30 @@ require 'includes/header.php';
 
 $categories = getAllCategories();
 
-if (empty($categories)) {
+if (isset($_GET['id']) && !empty($_GET['id'])) {
+    $id = $_GET['id'];
+    $category = getCategorieById($id);
+    $albums = getAlbumByIdCategorie($id);
+}
+
+if (empty($category)) {
     $erreur = "Erreur lors de la récupération des données";
 }
 
 ?>
 
-<div class="container">
-    <style>
-        .center{
-            text-align: center;
-            margin: 50px;
-
-        }
-    </style>
-    <br>
-    <?php if (isset($erreur)) { ?>
-        <div class="alert-danger alert">
-            <?php echo $erreur ?>
-        </div>
-    <?php } ?>
-    <?php
-    if (!empty($categories)) {
-        foreach ($categories as $category) {
-            $albums = getAlbumByIdCategorie($category['id']);
-            ?>
+    <div class="container">
+        <br>
+        <?php if (isset($erreur)) { ?>
+            <div class="alert-danger alert">
+                <?php echo $erreur ?>
+            </div>
+        <?php } ?>
+        <?php
+        if (!empty($category)) { ?>
             <div class="col-sm-12"style="padding-left: 0px; padding-right: 0px;">
                 <div class='hr'>
-    <span class='hr-title'><?php echo $category['nom']; ?></span></div>
+                    <span class='hr-title'><?php echo $category['nom']; ?></span></div>
 
                 <?php foreach ($albums as $album) {
                     $image = getFirstImageByIdAlbum($album['id']);
@@ -58,9 +54,9 @@ if (empty($categories)) {
                 <?php } ?>
             </div>
 
-        <?php }
-    } ?>
-</div>
+            <?php
+        } ?>
+    </div>
 
 <?php
 include 'includes/footer.php';

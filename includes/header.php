@@ -3,40 +3,29 @@
 </div>
 
 <nav>
-<!--    <div id="navbar">-->
-<!--        <img src="logo.png" width="180px">-->
-<!--        <br>-->
-<!--        <a href="index.php">Accueil</a>-->
-<!--        <a href="about.php">à propos</a>-->
-<!--        <a href="gallerie.php">Galeries</a>-->
-<!--        <a href="presse.php">Presse</a>-->
-<!--        <a href="contact.php">Contact</a>-->
-<!--        <a href="espace-client.php">Espace Client</a>-->
-<!--        <br> <br>-->
-<!--    </div>-->
-
-    <div id="navbar"
-
-
+    <div id="navbar">
+        <img src="logo.png" width="180px">
+        <br>
     </div>
 </nav>
 
 <div class="row" id="navbar">
-    <div class="col-sm-7">
+    <div class="text-center">
         <div class="btn-group">
-            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Action
-            </button>
+            <a href="index.php">Accueil</a>
+            <a type="button" data-toggle="dropdown">
+                Galleries
+            </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
+                <a class="dropdown-item" href="gallerie.php?id=1">Culinaire</a>
+                <a class="dropdown-item" href="gallerie.php?id=2">Mariage</a>
+                <a class="dropdown-item" href="gallerie.php?id=3">Corporate</a>
+                <a class="dropdown-item" href="gallerie.php?id=4">Publireportage</a>
             </div>
-            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Action
-            </button>
+            <a href="about.php">à propos</a>
+            <a href="presse.php">Presse</a>
+            <a href="contact.php">Contact</a>
+            <a href="espace-client.php">Espace Client</a>
         </div>
     </div>
 </div>
