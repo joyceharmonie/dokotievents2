@@ -59,7 +59,7 @@ class Image {
 
             if (move_uploaded_file($temporaryLocations[$i], $targetFile)) {
                 // TODO comment local line
-                $lien = 'http://localhost/dokotievents/' . $targetFile;
+                $lien = 'http://dokoti237.odns.fr/' . $targetFile;
                 //$lien = 'http://divinesalcoves.fr/' . $targetFile;
 
                 $dbh = connectDB();
@@ -88,7 +88,7 @@ class Image {
 
             //$lien = 'http://divinesalcoves.fr/' . $targetFile;
             // TODO comment local line
-            $lien = 'http://localhost/dokotievents/'. $targetFile;
+            $lien = 'http://dokoti237.odns.fr/'. $targetFile;
 
             $dbh = connectDB();
             $req = "INSERT INTO images (id, lien, id_album) VALUES (NULL, :lien, :idAlbum)";

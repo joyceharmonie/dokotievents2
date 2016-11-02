@@ -141,8 +141,8 @@ if (empty($transferts)) {
 
           <form enctype="multipart/form-data" action="admin-orphee.php" method="post" style="width:250px; margin:0 auto;">
     <span id="fileselector">
-        <p>Formulaire d'envoi de fichier</p>
-        <input type="text" name="password" placeholder="Mot de passe client" required autofocus maxlength="6">
+        <p>Formulaire d'envoi de fichier</p> <br><br>
+       <label for=""> Mot de passe client : <input type="text" name="password" value="DE-"  required maxlength="10"></label>
         <br/> <br>
         <label class="btn btn-default" for="upload-file-selector">
           <input id="upload-file-selector" type="file" name="zip[]" multiple accept=".jpg,.png,.zip,.rar,jpeg" required>
