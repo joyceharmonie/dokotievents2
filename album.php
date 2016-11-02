@@ -7,7 +7,7 @@ session_start();
  * Time: 18:47
  */
 
-require 'includes/authentication.php';
+
 include 'includes/functions.php';
 include 'includes/db.php';
 
