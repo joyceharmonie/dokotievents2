@@ -148,12 +148,21 @@ if (empty($category)) {
                 }
                 ?>
 <!--tentative copié collé-->
+                <style> .imgback {
+                        background: #2a2828 url("upload_gallery/malonga/chefmalonga_(3).jpg") no-repeat center center/cover;
+                        height: 100px;
+                        width: 100px;
+                    }</style>
+<!--tentative copié collé-->
+
+
 
                 <?php foreach ($albums as $album) {
                     $image = getFirstImageByIdAlbum($album['id']);
                     ?>
                     <div class="col-md-3 col-sm-4 col-xs-6" style="padding-left: 0px; padding-right: 0px;">
                         <div class="hovereffect">
+                            <div class="imgback"></div>
                             <img class="img-responsive" src="<?php echo $image['lien'] ?>"  alt="">
                             <div class="overlay">
                                 <h2><?php if(isset($album) && !empty($album)) { echo $album['title']; } ?></h2>
