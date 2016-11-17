@@ -154,16 +154,13 @@ if (empty($category)) {
                     ?>
                     <div class="col-md-3 col-sm-4 col-xs-6" style="padding-left: 0px; padding-right: 0px;">
                         <div class="hovereffect">
-                            <img class="img-responsive" src="<?php echo $image['lien'] ?>"  alt="">
+                            <img class="img-responsive" style="width: 235px; height: 235px;" src="<?php echo $image['lien'] ?>"  alt="">
                             <div class="overlay">
                                 <h2><?php if(isset($album) && !empty($album)) { echo $album['title']; } ?></h2>
                                 <a class="info" href="album.php?id=<?php echo $album['id']; ?>">Voir tout</a>
                             </div>
                         </div>
                     </div>
-
-
-
 
                 <?php } ?>
             </div>

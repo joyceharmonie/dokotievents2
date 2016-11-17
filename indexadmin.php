@@ -91,67 +91,66 @@ if (empty($transferts)) {
 
       </ul>
     </div>
-
-    <div class="col-sm-12">
-      <h2>Derniers albums</h2>
-      <?php foreach ($lastAlbums as $album) {
-        $image = getFirstImageByIdAlbum($album['id']);
-        ?>
-        <div class="col-sm-2">
-          <a href="album.php?id=<?php echo $album['id']; ?>">
-            <img  style="width: 150px; height: 150px;" src="<?php echo $image['lien'] ?>" class="img-circle img-wide" />
-            <h4><?php echo $album['nom']; ?></h4>
-          </a>
-        </div>
-      <?php } ?>
-    </div>
+  </div>
+</div>
 
 
+<div class="container" style="margin-left: 20%;">
 
-        </div>
+  <div class="col-sm-12">
+    <?php foreach ($lastAlbums as $album) {
+      $image = getFirstImageByIdAlbum($album['id']);
+      ?>
+      <div class="col-sm-2">
+        <a href="album.php?id=<?php echo $album['id']; ?>">
+          <img  style="width: 150px; height: 150px;" src="<?php echo $image['lien'] ?>" class="img-circle img-wide" />
+          <h4><?php echo $album['nom']; ?></h4>
+        </a>
       </div>
+    <?php } ?>
+  </div>
 
-      <h2 class="sub-header">Section title</h2>
-    <div class="container">
-      <h2>Mes Albums</h2>
-      <p>Récapitulatif de mes albums</p>
-      <?php if (isset($info)) { ?>
-        <div class="alert alert-info">
-          <?php echo $info ?>
-        </div>
-      <?php } ?>
 
-      <table class="table">
-        <thead>
-        <tr>
-          <th>Transfert n°</th>
-          <th>Nom de l'album</th>
-          <!--<th>Lien du dossier de l'album</th>-->
-          <th>Date ajout</th>
-          <th>Titre de l'album</th>
-          <th>Catégorie de l'album</th>
-
-        </tr>
-        </thead>
-        <tbody>
-        <br> <br>
-        <br> <br>
-
-        <?php
-        foreach ($albums as $album) {
-          echo '<tr>';
-          echo '<td>'.$album['id'].'</td>';
-          echo '<td>'.$album['nom'].'</td>';
-          echo '<td>'.$album['created_date'].'</td>';
-          echo '<td>'.$album['title'].'</td>';
-          echo '<td>'.$album['id_category'].'</td>';
-          echo '</tr>';
-        }
-        ?>
-        </tbody>
-      </table>
+  <h2>Mes Albums</h2>
+  <p>Récapitulatif de mes albums</p>
+  <?php if (isset($info)) { ?>
+    <div class="alert alert-info">
+      <?php echo $info ?>
     </div>
-<div class="container">
+  <?php } ?>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Transfert n°</th>
+      <th>Nom de l'album</th>
+      <!--<th>Lien du dossier de l'album</th>-->
+      <th>Date ajout</th>
+      <th>Titre de l'album</th>
+      <th>Catégorie de l'album</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <br> <br>
+    <br> <br>
+
+    <?php
+    foreach ($albums as $album) {
+      echo '<tr>';
+      echo '<td>'.$album['id'].'</td>';
+      echo '<td>'.$album['nom'].'</td>';
+      echo '<td>'.$album['created_date'].'</td>';
+      echo '<td>'.$album['title'].'</td>';
+      echo '<td>'.$album['id_category'].'</td>';
+      echo '</tr>';
+    }
+    ?>
+    </tbody>
+  </table>
+</div>
+
+<div class="container" style="margin-left: 20%;">
   <h2>Mes Fichiers</h2>
   <p>Récapitulatif de mes envois</p>
   <?php if (isset($info)) { ?>
@@ -168,7 +167,7 @@ if (empty($transferts)) {
       <th>Lien du fichier</th>
       <th>Date ajout</th>
       <th>Mot de passe client</th>
-      
+
     </tr>
     </thead>
     <tbody>
