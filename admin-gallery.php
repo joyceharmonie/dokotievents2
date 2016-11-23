@@ -43,7 +43,7 @@ require 'includes/head.php';
 $categories = getAllCategories();
 $albums = getAllAlbums();
 ?>
-  <br>
+<br>
 
 <?php if(isset($erreur)) { ?>
   <div class="alert alert-danger">
@@ -84,15 +84,11 @@ $albums = getAllAlbums();
     <div class="col-sm-3 col-md-2 sidebar">
       <ul class="nav nav-sidebar">
         <li><a href="indexadmin.php">Vue d'ensemble</a></li>
-
-
-
       </ul>
       <ul class="nav nav-sidebar">
         <li class="active"><a href="indexadmin.php">
             Créer un album <span class="sr-only">(current)</span></a></li>
         <li><a href="admin-orphee.php">Envoyer des photos</a></li>
-
       </ul>
       <ul class="nav nav-sidebar">
         <li><a href="">Voir les Galleries</a></li>
@@ -100,7 +96,7 @@ $albums = getAllAlbums();
 
       </ul>
     </div>
-<!-- fin de la nav-->
+    <!-- fin de la nav-->
 
 
     <div class="container"> <br />
@@ -110,69 +106,69 @@ $albums = getAllAlbums();
         <br>
         <div class="panel panel-default" style="width:350px;">
           <div class="panel-heading"><strong>Création d'albums</strong> <small> </small></div>
-              <form method="post" action="admin-gallery.php" enctype="multipart/form-data" style="text-align: center;">
-                <label for="">Nom de l'album (unqiue)  : <input type="text" name="nom" placeholder="nellyetjose" width="150px" required/></label>
-                <br>
-                <label for="">Titre de l'album qui apparaitra dans la page de l'album  : <input type="text" name="title" placeholder="Mariage de Nelly et José" width="150px"></label>
-                <br> <br>
-                <label class="custom-file">
-                  <input type="file"  class="custom-file-input" name="carousselfile[]" accept="image/*" required multiple/>
-                  <br>
-                </label>
+          <form method="post" action="admin-gallery.php" enctype="multipart/form-data" style="text-align: center;">
+            <label for="">Nom de l'album (unqiue)  : <input type="text" name="nom" placeholder="nellyetjose" width="150px" required/></label>
+            <br>
+            <label for="">Titre de l'album qui apparaitra dans la page de l'album  : <input type="text" name="title" placeholder="Mariage de Nelly et José" width="150px"></label>
+            <br> <br>
+            <label class="custom-file">
+              <input type="file"  class="custom-file-input" name="carousselfile[]" accept="image/*" required multiple/>
+              <br>
+            </label>
 
-                <select class="" name="idCategory" required>
-                  <option value="">Sélectionner une catégorie</option>
-                  <?php foreach($categories as $category) { ?>
-                    <option <?php if (isset($_POST['idCategory']) && $_POST['idCategory'] == $category['id']) { echo 'selected'; } ?> value="<?php echo $category['id'] ?>"><?php echo $category['nom'] ?></option>
-                  <?php } ?>
-                </select>
-                <br>
-                <br>
-                  <input type="submit" name="uploadForm" value="Créer" >
+            <select class="" name="idCategory" required>
+              <option value="">Sélectionner une catégorie</option>
+              <?php foreach($categories as $category) { ?>
+                <option <?php if (isset($_POST['idCategory']) && $_POST['idCategory'] == $category['id']) { echo 'selected'; } ?> value="<?php echo $category['id'] ?>"><?php echo $category['nom'] ?></option>
+              <?php } ?>
+            </select>
+            <br>
+            <br>
+            <input type="submit" name="uploadForm" value="Créer" >
 
-                <br>
-              </form>
-              </div>
-<!-- fin du bloc-->
-              <div class="col-sm-2 col-sm-offset-2">
-                <br>
-              <div class="panel panel-default" style="width:500px;">
-                <div class="panel-heading"><strong>Récapitulatif Des Albums</strong> <small> </small></div>
+            <br>
+          </form>
+        </div>
+        <!-- fin du bloc-->
+        <div class="col-sm-2 col-sm-offset-2">
+          <br>
+          <div class="panel panel-default" style="width:500px;">
+            <div class="panel-heading"><strong>Récapitulatif Des Albums</strong> <small> </small></div>
 
 
-                  <table class="table">
-                    <thead>
-                    <tr>
-                      <th>Transfert n°</th>
-                      <th>Nom de l'album</th>
-                      <!--<th>Lien du dossier de l'album</th>-->
-                      <th>Date ajout</th>
-                      <th>Titre de l'album</th>
-                      <th>Catégorie de l'album</th>
-                      <th>Supprimer</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <br> <br>
-                    <br> <br>
+            <table class="table">
+              <thead>
+              <tr>
+                <th>Transfert n°</th>
+                <th>Nom de l'album</th>
+                <!--<th>Lien du dossier de l'album</th>-->
+                <th>Date ajout</th>
+                <th>Titre de l'album</th>
+                <th>Catégorie de l'album</th>
+                <th>Supprimer</th>
+              </tr>
+              </thead>
+              <tbody>
+              <br> <br>
+              <br> <br>
 
-                    <?php
-                    foreach ($albums as $album) {
-                      echo '<tr>';
-                      echo '<td>'.$album['id'].'</td>';
-                      echo '<td>'.$album['nom'].'</td>';
-                      echo '<td>'.$album['created_date'].'</td>';
-                      echo '<td>'.$album['title'].'</td>';
-                      echo '<td>'.$album['id_category'].'</td>';
-                      echo '<td><form action="admin-gallery.php" method="post"><input name="albumId" type="hidden" value="'. $album['id'] . '"><button type="submit" name="deleteForm" value="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></form></td>';
-                      echo '</tr>';
-                    }
-                    ?>
-                    </tbody>
-                  </table>
-</div>
+              <?php
+              foreach ($albums as $album) {
+                echo '<tr>';
+                echo '<td>'.$album['id'].'</td>';
+                echo '<td>'.$album['nom'].'</td>';
+                echo '<td>'.$album['created_date'].'</td>';
+                echo '<td>'.$album['title'].'</td>';
+                echo '<td>'.$album['id_category'].'</td>';
+                echo '<td><form action="admin-gallery.php" method="post"><input name="albumId" type="hidden" value="'. $album['id'] . '"><button type="submit" name="deleteForm" value="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></form></td>';
+                echo '</tr>';
+              }
+              ?>
+              </tbody>
+            </table>
+          </div>
 
-</div>
+        </div>
         <!-- Bootstrap core JavaScript
     ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
