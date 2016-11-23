@@ -62,7 +62,7 @@ if (empty($transferts)) {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.php">Retourner au site web</a></li>
-        <li><a href="#">Me déconnecter</a></li>
+        <li><a href="logout.php">Me déconnecter</a></li>
 
       </ul>
 
@@ -95,20 +95,20 @@ if (empty($transferts)) {
 </div>
 
 
-<div class="container" style="margin-left: 20%;">
+<div class="container" style="margin-left: 20%;object-fit: contain;">
 
   <div class="col-sm-12">
     <?php foreach ($lastAlbums as $album) {
       $image = getFirstImageByIdAlbum($album['id']);
       ?>
-      <div class="col-sm-2">
+      <div class="col-sm-4">
         <a href="album.php?id=<?php echo $album['id']; ?>">
-          <img  style="width: 150px; height: 150px;" src="<?php echo $image['lien'] ?>" class="img-circle img-wide" />
+          <img  style="width: 100px; height: 100px;" src="<?php echo $image['lien'] ?>" class="img-circle img-wide" />
           <h4><?php echo $album['nom']; ?></h4>
         </a>
       </div>
     <?php } ?>
-  </div>
+
 
 
   <h2>Mes Albums</h2>
@@ -149,8 +149,9 @@ if (empty($transferts)) {
     </tbody>
   </table>
 </div>
+</div>
 
-<div class="container" style="margin-left: 20%;">
+<div class="container" style="margin-left: 20%;object-fit: contain;">
   <h2>Mes Fichiers</h2>
   <p>Récapitulatif de mes envois</p>
   <?php if (isset($info)) { ?>

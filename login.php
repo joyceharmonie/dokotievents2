@@ -8,6 +8,9 @@ connectDB();
 
 // si session deja set on redirige vers indexadmin.php
 if (isset($_SESSION['username']) && isset($_SESSION['password'])) {
+    echo '<SCRIPT LANGUAGE="JavaScript">
+document.location.href="indexadmin.php"
+</SCRIPT>';
     header('Location: indexadmin.php');
 }
 
@@ -21,7 +24,7 @@ if ($_POST) {
     if (is_array($user)) {
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        header('Location: indexadmin.php');
+        echo '<SCRIPT LANGUAGE="JavaScript">document.location.href="indexadmin.php"</SCRIPT>';
     }
     else {
         $error = 'Mauvais identifiants';

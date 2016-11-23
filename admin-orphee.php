@@ -96,7 +96,7 @@ if (empty($transferts)) {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.php">Retourner au site web</a></li>
-        <li><a href="#">Me déconnecter</a></li>
+        <li><a href="logout.php">Me déconnecter</a></li>
 
       </ul>
 
