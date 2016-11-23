@@ -22,18 +22,15 @@ include 'includes/slider.php';
 
     <br>
     <div class="container">
-
-
-
         <style>
             .imgobject {
                 object-fit: cover;
                 height: 200px;
                 width: 280px;
             }
-            .hovereffect .overlay {
-            height: 240px!important;
-            }
+            /*.hovereffect .overlay {*/
+            /*height: 240px!important;*/
+            /*}*/
         </style>
         <div class='hr'>
             <span class='hr-title'>DERNIERS REPORTAGES</span>
@@ -45,13 +42,10 @@ include 'includes/slider.php';
             ?>
 
 
-            <div class="col-md-3 col-sm-4 col-xs-6" style="padding-left: 0px; padding-right: 0px;">
-
-
-                <div class="hovereffect">
-
+            <div class="col-md-3 col-sm-4 col-xs-6" style="padding-left: 0px; padding-right: 15px;">
+                <div class="hovereffect" style="height: 220px; margin-bottom: 5%;">
                     <img class="img-responsive imgobject" src="<?php echo $image['lien'] ?>" alt="dokoti">
-                    <div class="overlay">
+                    <div class="overlay" style="height: 220px;">
                         <h2><?php if (isset($album) && !empty($album)) {
                                 echo $album['title'];
                             } ?></h2>

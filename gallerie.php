@@ -130,10 +130,8 @@ if (empty($category)) {
                         -webkit-transition-delay:.2s;
                         transition-delay:.2s;
                     }
-                    Close
 
                 </style>
-<!--tentative copié collé-->
                 <?php
                 if (isset($_GET["id"])) {
                     // on récupére l'id de l'abum via l 'url
@@ -147,12 +145,11 @@ if (empty($category)) {
                     }
                 }
                 ?>
-<!--tentative copié collé-->
 
                 <?php foreach ($albums as $album) {
                     $image = getFirstImageByIdAlbum($album['id']);
                     ?>
-                    <div class="col-md-3 col-sm-4 col-xs-6" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-3 col-sm-4 col-xs-6" style="padding-left: 0px; padding-right: 10px;">
                         <div class="hovereffect">
                             <img class="img-responsive" src="<?php echo $image['lien'] ?>"  alt="">
                             <div class="overlay">
