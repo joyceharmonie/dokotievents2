@@ -59,8 +59,8 @@ class Image {
 
             if (move_uploaded_file($temporaryLocations[$i], $targetFile)) {
                 // TODO comment local line
-                //$lien = 'http://dokoti237.odns.fr/' . $targetFile;
-                $lien = 'http://localhost/dokotievents2/' . $targetFile;
+                $lien = 'http://dokoti237.odns.fr/' . $targetFile;
+                //$lien = 'http://localhost/dokotievents2/' . $targetFile;
 
                 $dbh = connectDB();
                 $req = "INSERT INTO transferts (id, password, lien, date_ajout) VALUES (NULL, :password, :lien, :dateAjout)";
@@ -87,8 +87,8 @@ class Image {
         if (move_uploaded_file($temporaryLocation, $targetFile)) {
 
             // TODO comment local line
-            //$lien = 'http://dokoti237.odns.fr/'. $targetFile;
-            $lien = 'http://localhost/dokotievents2/' . $targetFile;
+            $lien = 'http://dokoti237.odns.fr/'. $targetFile;
+            //$lien = 'http://localhost/dokotievents2/' . $targetFile;
 
             $dbh = connectDB();
             $req = "INSERT INTO images (id, lien, id_album) VALUES (NULL, :lien, :idAlbum)";
