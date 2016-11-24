@@ -11,24 +11,24 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <div class="fill" style="background-image:url('images/1900.jpg');"></div>
-<!--      <div class="fill" style="background-image:url('http://events.dokoti.com/images/1900.jpg');"></div>-->
+<!--      <div class="fill" style="background-image:url('images/1900.jpg');"></div>-->
+      <div class="fill" style="background-image:url('http://events.dokoti.com/images/Mariage.jpg');"></div>
       <div class="carousel-caption">
-        <h2>Titre</h2>
+        <h2>Mariage</h2>
       </div>
     </div>
     <div class="item">
-      <div class="fill" style="background-image:url('images/1900.jpg');"></div>
-<!--      <div class="fill" style="background-image:url('http://events.dokoti.com/images/1900.jpg');"></div>-->
+<!--      <div class="fill" style="background-image:url('images/1900.jpg');"></div>-->
+      <div class="fill" style="background-image:url('http://events.dokoti.com/images/Culinaire.jpg');"></div>
       <div class="carousel-caption">
-        <h2>Titre</h2>
+        <h2>Culinaire</h2>
       </div>
     </div>
     <div class="item">
-      <div class="fill" style="background-image:url('images/1900.jpg');"></div>
-<!--      <div class="fill" style="background-image:url('http://events.dokoti.com/images/1900.jpg');"></div>-->
+<!--      <div class="fill" style="background-image:url('images/1900.jpg');"></div>-->
+      <div class="fill" style="background-image:url('http://events.dokoti.com/images/Publireportage.jpg');"></div>
       <div class="carousel-caption">
-        <h2>Titre</h2>
+        <h2>Publireportage</h2>
       </div>
     </div>
   </div>
