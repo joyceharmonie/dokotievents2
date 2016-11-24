@@ -16,10 +16,7 @@ include 'includes/header.php';
 $lastAlbums = get20LastAlbums();
 include 'includes/slider.php';
 ?>
-
-
     <br>
-
     <br>
     <div class="container">
         <style>
@@ -32,7 +29,7 @@ include 'includes/slider.php';
             /*height: 240px!important;*/
             /*}*/
         </style>
-        <div class='hr'>
+        <div class='hr animated slideInDown'>
             <span class='hr-title'>DERNIERS REPORTAGES</span>
         </div>
         <br>
@@ -41,8 +38,7 @@ include 'includes/slider.php';
             $image = getFirstImageByIdAlbum($album['id']);
             ?>
 
-
-            <div class="col-md-3 col-sm-4 col-xs-6" style="padding-left: 0px; padding-right: 15px;">
+            <div class="col-md-3 col-sm-4 col-xs-6 animated slideInUp" style="padding-left: 0px; padding-right: 15px;">
                 <div class="hovereffect" style="height: 220px; margin-bottom: 5%;">
                     <img class="img-responsive imgobject" src="<?php echo $image['lien'] ?>" alt="dokoti">
                     <div class="overlay" style="height: 220px;">
@@ -56,10 +52,6 @@ include 'includes/slider.php';
 
         <?php } ?>
     </div>
-
-
-
-
 
 <?php
 include 'includes/footer.php';

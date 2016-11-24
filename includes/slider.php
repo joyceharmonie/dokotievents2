@@ -1,4 +1,4 @@
-<div id="page">
+<div class="container" style="height: 426px;*/">
 <!-- Header Carousel -->
 <header id="myCarousel" class="carousel slide">
   <!-- Indicators -->
@@ -11,19 +11,22 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <div class="fill" style="background-image:url('http://events.dokoti.com/images/1900.jpg');"></div>
+      <div class="fill" style="background-image:url('images/1900.jpg');"></div>
+<!--      <div class="fill" style="background-image:url('http://events.dokoti.com/images/1900.jpg');"></div>-->
       <div class="carousel-caption">
         <h2>Titre</h2>
       </div>
     </div>
     <div class="item">
-      <div class="fill" style="background-image:url('http://events.dokoti.com/images/1900.jpg');"></div>
+      <div class="fill" style="background-image:url('images/1900.jpg');"></div>
+<!--      <div class="fill" style="background-image:url('http://events.dokoti.com/images/1900.jpg');"></div>-->
       <div class="carousel-caption">
         <h2>Titre</h2>
       </div>
     </div>
     <div class="item">
-      <div class="fill" style="background-image:url('http://events.dokoti.com/images/1900.jpg');"></div>
+      <div class="fill" style="background-image:url('images/1900.jpg');"></div>
+<!--      <div class="fill" style="background-image:url('http://events.dokoti.com/images/1900.jpg');"></div>-->
       <div class="carousel-caption">
         <h2>Titre</h2>
       </div>
