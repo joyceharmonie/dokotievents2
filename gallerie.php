@@ -58,15 +58,11 @@ if (empty($category)) {
                 </div>
 
                 <br>
-
-                <?php foreach ($albums as $album) {
-                    $image = getFirstImageByIdAlbum($album['id']);
-                    ?>
-
+                <?php foreach ($albums as $album) { ?>
 
                     <div class="col-md-3 col-sm-4 col-xs-6 animated slideInUp" style="padding-left: 0px; padding-right: 15px;">
                         <div class="hovereffect" style="height: 220px; margin-bottom: 5%;">
-                            <img class="img-responsive imgobject" src="<?php echo $image['lien'] ?>" alt="dokoti">
+                            <img class="img-responsive imgobject" src="<?php echo $album['thumbnail'] ?>" alt="dokoti">
                             <div class="overlay" style="height: 220px;">
                                 <h2><?php if (isset($album) && !empty($album)) {
                                         echo $album['title'];

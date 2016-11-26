@@ -20,7 +20,7 @@
                 <a class="dropdown-item" href="gallerie.php?id=1">Culinaire</a>
                 <a class="dropdown-item" href="gallerie.php?id=2">Mariage</a>
                 <a class="dropdown-item" href="gallerie.php?id=3">Corporate</a>
-                <a class="dropdown-item" href="gallerie.php?id=4">Publireportage</a>
+                <a class="dropdown-item" href="gallerie.php?id=4">Publi reportage</a>
             </div>
             <a href="about.php">à propos</a>
             <a href="presse.php">Presse</a>

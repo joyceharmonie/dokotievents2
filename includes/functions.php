@@ -32,7 +32,7 @@ function getTransfertsByPassword($password) {
 
 function get20LastAlbums() {
     $dbh = connectDB();
-    $req = "SELECT id, nom, created_date, title, id_category FROM albums ORDER BY id DESC LIMIT 0, 20";
+    $req = "SELECT id, nom, created_date, title, id_category, thumbnail FROM albums ORDER BY id DESC LIMIT 0, 20";
     $ret = $dbh->query($req)->fetchAll();
     return $ret;
 }
@@ -53,7 +53,7 @@ function getAllCategories() {
 
 function getAlbumById($id) {
     $dbh = connectDB();
-    $req = "SELECT id, nom, created_date, title, id_category FROM albums WHERE id = $id";
+    $req = "SELECT id, nom, created_date, title, id_category, thumbnail FROM albums WHERE id = $id";
     $ret = $dbh->query($req)->fetch();
     return $ret;
 }
@@ -67,7 +67,7 @@ function getImagesByIdAlbum($id) {
 
 function getAlbumByIdCategorie($id) {
     $dbh = connectDB();
-    $req = "SELECT id, nom, created_date, title, id_category FROM albums WHERE id_category = $id";
+    $req = "SELECT id, nom, created_date, title, id_category, thumbnail FROM albums WHERE id_category = $id";
     $ret = $dbh->query($req)->fetchAll();
     return $ret;
 }
@@ -99,7 +99,7 @@ function deleteTransfertById($id) {
 
  function getAllAlbums() {
      $dbh = connectDB();
-     $req = "SELECT id, nom, created_date, title, id_category FROM albums";
+     $req = "SELECT id, nom, created_date, title, id_category, thumbnail FROM albums";
      $ret = $dbh->query($req)->fetchAll();
      return $ret;
  }

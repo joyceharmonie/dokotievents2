@@ -4,6 +4,7 @@ session_start();
 require 'includes/authentication.php';
 require 'includes/db.php';
 require 'includes/functions.php';
+include("class/resizeImage.php");
 require 'class/image.php';
 
 // si on arrive en POST
@@ -18,15 +19,15 @@ if (!empty($_POST['uploadForm'])) {
   $title = $_POST['title'];
   // Call the main function
   $idAlbum = $image->uploadAlbum($names, $temporaryLocation, $nomAlbum, $idCategory, $title);
-  //$image->creationAlbumPage($nom_album);
+
   // si album a bien été créé
-  if ($idAlbum != 0) {
-    $redirection = 'album.php?id=' . $idAlbum;
-    header('Location: '. $redirection);
-  }
-  else {
-    $erreur = "Erreur lors de l'upload";
-  }
+//  if ($idAlbum != 0) {
+//    $redirection = 'album.php?id=' . $idAlbum;
+//    header('Location: '. $redirection);
+//  }
+//  else {
+//    $erreur = "Erreur lors de l'upload";
+//  }
 }
 
 

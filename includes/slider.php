@@ -28,7 +28,7 @@
 <!--      <div class="fill" style="background-image:url('images/1900.jpg');"></div>-->
       <div class="fill" style="background-image:url('http://events.dokoti.com/images/Publireportage.jpg');"></div>
       <div class="carousel-caption">
-        <h2>Publireportage</h2>
+        <h2>Publi reportage</h2>
       </div>
     </div>
   </div>
